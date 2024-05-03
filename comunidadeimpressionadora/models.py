@@ -1,5 +1,5 @@
 from comunidadeimpressionadora import database, login_manager
-from datetime import datetime, UTC
+from datetime import datetime, timezone
 from flask_login import UserMixin
 
 @login_manager.user_loader
@@ -7,7 +7,7 @@ def load_usuario(id_usuario):
     return Usuario.query.get(int(id_usuario))
 
 def data_hora_padrao():
-    return datetime.now(UTC)
+    return datetime.now(timezone.utc)
 
 class Usuario(database.Model, UserMixin):
     id = database.Column(database.Integer, primary_key=True)
