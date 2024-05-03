@@ -1,0 +1,20 @@
+a {
+    text-decoration: none;
+}
+
+.post {
+    background-color: #efefef;
+}
+
+.post a:hover {
+    text-decoration: underline;
+}
+
+.titulo-post {
+    color: #212529;
+}
+
+.titulo-post:hover {
+    color: #131313;
+    text-decoration: underline;
+}
